@@ -9,3 +9,9 @@ def get_logger(name="Vehicle_Pipeline"):
         format="%(asctime)s - %(time)s - %(levelname)s - %(message)s"
     )
     return logging.getLogger(name)
+
+# Database connection
+def get_db_connection(db_path="data/vehicles.db"):
+    path("data").mkdir(exist_ok=True)
+    conn = sqlite3.connect(db_path)
+    return conn

@@ -6,7 +6,8 @@ from pathlib import Path
 def get_logger(name="Vehicle_Pipeline"):
     logging.basicConfig(
         level=logging.INFO,
-        format="%(asctime)s - %(time)s - %(levelname)s - %(message)s"
+        format="%(asctime)s - %(levelname)s - %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S"
     )
     return logging.getLogger(name)
 

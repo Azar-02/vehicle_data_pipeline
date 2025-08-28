@@ -6,6 +6,7 @@ logger = get_logger("Transform")
 
 def transform_data(df:pd.DataFrame):
     try:
+        df = df.copy()
         # Drop duplicates
         df = df.drop_duplicates()
 

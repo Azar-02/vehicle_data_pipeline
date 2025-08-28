@@ -1,6 +1,6 @@
 import logging
 import sqlite3
-from pathlib import path
+from pathlib import Path
 
 # Setup logging
 def get_logger(name="Vehicle_Pipeline"):
@@ -12,6 +12,6 @@ def get_logger(name="Vehicle_Pipeline"):
 
 # Database connection
 def get_db_connection(db_path="data/vehicles.db"):
-    path("data").mkdir(exist_ok=True)
+    Path("data").mkdir(exist_ok=True)
     conn = sqlite3.connect(db_path)
     return conn
